@@ -247,6 +247,6 @@ TSWLatexianTemp*
 *.sig
 
 pkg/
-src/
+#src/
 
 # Created by .ignore support plugin (hsz.mobi)
