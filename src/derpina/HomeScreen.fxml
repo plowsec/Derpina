@@ -9,28 +9,30 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: black;" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="868.0" prefWidth="1212.0" style="-fx-background-color: black;" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
     <columnConstraints>
         <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
         <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="100.0" />
-        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
-        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
+        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="220.0" />
+        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="180.0" />
         <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="250.0" />
     </columnConstraints>
     <rowConstraints>
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <padding>
         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
     </padding>
     <children>
-        <Label prefHeight="163.0" prefWidth="755.0" text="All sections" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <Label prefHeight="163.0" prefWidth="755.0" text="All sections" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
             <font>
                 <Font size="36.0" />
             </font>
@@ -38,7 +40,7 @@
                 <Insets left="10.0" />
             </padding>
         </Label>
-        <Label alignment="CENTER" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Top sections" GridPane.rowIndex="1">
+        <Label alignment="CENTER" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Top sections" textFill="WHITE" GridPane.rowIndex="1">
             <font>
                 <Font size="36.0" />
             </font>
@@ -46,7 +48,7 @@
                 <Insets left="10.0" />
             </padding>
         </Label>
-        <ImageView fitHeight="120.0" fitWidth="242.0" pickOnBounds="true" smooth="false" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <ImageView fitHeight="120.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true" smooth="false" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
             <image>
                 <Image url="@../../res/9gag_logo.png" />
             </image>
@@ -54,9 +56,249 @@
                 <Rectangle2D />
             </viewport>
             <GridPane.margin>
-                <Insets />
+                <Insets left="50.0" />
             </GridPane.margin>
         </ImageView>
+      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.rowIndex="2">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/jesus.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="HOT" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Text>
+         </children>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </StackPane>
+      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.rowIndex="3">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.68" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/overly-manly-man.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="TRENDING" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </StackPane>
+      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.rowIndex="4">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/one-does-not-simply.png" />
+               </image>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="FRESH" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Text>
+         </children>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </StackPane>
+      <StackPane layoutX="110.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/awkward.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="GIF" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Text>
+         </children>
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </StackPane>
+      <StackPane layoutX="458.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/deadpool.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="COSPLAY" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </StackPane>
+      <StackPane layoutX="458.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/strahovski.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="NSFW" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </StackPane>
+      <StackPane layoutX="458.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/high-guy.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="VIDEO" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </StackPane>
+      <StackPane layoutX="672.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/forever-alone.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="COMIC" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </StackPane>
+      <StackPane layoutX="672.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/itguy.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="GEEKY" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </StackPane>
+      <StackPane layoutX="672.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/girl.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="GIRL" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </StackPane>
+      <StackPane layoutX="927.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/high-guy.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="WTF" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </StackPane>
+      <StackPane layoutX="927.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+               <image>
+                  <Image url="@../../res/high-guy.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="ANIME" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </StackPane>
     </children>
     <effect>
         <ColorAdjust />
