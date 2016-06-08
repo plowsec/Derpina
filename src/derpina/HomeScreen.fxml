@@ -263,7 +263,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@../../res/high-guy.png" />
+                  <Image url="@../../res/chubby_bubbles_girl.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -283,7 +283,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@../../res/high-guy.png" />
+                  <Image url="@../../res/anime.png" />
                </image>
                <StackPane.margin>
                   <Insets />
