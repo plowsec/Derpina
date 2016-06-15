@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="868.0" prefWidth="1212.0" style="-fx-background-color: black;" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="868.0" prefWidth="1212.0" style="-fx-background-color: black;" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derpina.controllers.HomeController">
     <columnConstraints>
         <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
         <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="100.0" />
@@ -61,15 +62,21 @@
         </ImageView>
       <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.rowIndex="2">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="hotMenu" fx:id="hotMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.36" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../res/jesus.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
-            <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="HOT" textAlignment="CENTER">
+            <Text id="hotLabel" fx:id="hotLabel" fill="WHITE" fontSmoothingType="LCD" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="HOT" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="49.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Text>
          </children>
          <GridPane.margin>
@@ -78,18 +85,24 @@
       </StackPane>
       <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.rowIndex="3">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.68" pickOnBounds="true">
+            <ImageView id="trendingMenu" fx:id="trendingMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.68" pickOnBounds="true">
                <image>
                   <Image url="@../../res/overly-manly-man.png" />
                </image>
                <StackPane.margin>
                   <Insets />
                </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="TRENDING" textAlignment="CENTER">
+            <Text id="trendingLabel" fx:id="trendingLabel" fill="WHITE" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="TRENDING" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="29.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Text>
          </children>
          <GridPane.margin>
@@ -98,15 +111,21 @@
       </StackPane>
       <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.rowIndex="4">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView id="freshMenu" fx:id="freshMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/one-does-not-simply.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="FRESH" textAlignment="CENTER">
+            <Text id="freshLabel" fx:id="freshLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="FRESH" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="43.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Text>
          </children>
          <GridPane.margin>
@@ -115,7 +134,7 @@
       </StackPane>
       <StackPane layoutX="110.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView id="gifMenu" fx:id="gifMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/awkward.png" />
                </image>
@@ -123,7 +142,7 @@
                   <Insets />
                </StackPane.margin>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="GIF" textAlignment="CENTER">
+            <Text id="gifLabel" fx:id="gifLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="GIF" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="43.0" />
                </font>
@@ -132,10 +151,13 @@
          <GridPane.margin>
             <Insets left="40.0" />
          </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </StackPane>
       <StackPane layoutX="458.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView id="cosplayMenu" fx:id="cosplayMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/deadpool.png" />
                </image>
@@ -143,7 +165,7 @@
                   <Insets />
                </StackPane.margin>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="COSPLAY" textAlignment="CENTER">
+            <Text id="cosplayLabel" fx:id="cosplayLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="COSPLAY" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -155,10 +177,13 @@
          <GridPane.margin>
             <Insets left="40.0" />
          </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </StackPane>
       <StackPane layoutX="458.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView id="nsfwMenu" fx:id="nsfwMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/strahovski.png" />
                </image>
@@ -166,7 +191,7 @@
                   <Insets />
                </StackPane.margin>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="NSFW" textAlignment="CENTER">
+            <Text id="nsfwLabel" fx:id="nsfwLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="NSFW" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -178,10 +203,13 @@
          <GridPane.margin>
             <Insets left="40.0" />
          </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </StackPane>
       <StackPane layoutX="458.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView id="videoMenu" fx:id="videoMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/high-guy.png" />
                </image>
@@ -189,7 +217,7 @@
                   <Insets />
                </StackPane.margin>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="VIDEO" textAlignment="CENTER">
+            <Text id="videoLabel" fx:id="videoLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="VIDEO" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -198,10 +226,13 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </StackPane>
       <StackPane layoutX="672.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView id="comicMenu" fx:id="comicMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/forever-alone.png" />
                </image>
@@ -209,7 +240,7 @@
                   <Insets />
                </StackPane.margin>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="COMIC" textAlignment="CENTER">
+            <Text id="comicLabel" fx:id="comicLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="COMIC" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -218,10 +249,13 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </StackPane>
       <StackPane layoutX="672.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView fx:id="geekyMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/itguy.png" />
                </image>
@@ -229,7 +263,7 @@
                   <Insets />
                </StackPane.margin>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="GEEKY" textAlignment="CENTER">
+            <Text id="geekyLabel" fx:id="geekyLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="GEEKY" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -238,10 +272,13 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </StackPane>
       <StackPane layoutX="672.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView id="girlMenu" fx:id="girlMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/girl.png" />
                </image>
@@ -249,7 +286,7 @@
                   <Insets />
                </StackPane.margin>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="GIRL" textAlignment="CENTER">
+            <Text id="girlLabel" fx:id="girlLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="GIRL" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -258,10 +295,13 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </StackPane>
       <StackPane layoutX="927.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView id="wtfMenu" fx:id="wtfMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/chubby_bubbles_girl.png" />
                </image>
@@ -269,7 +309,7 @@
                   <Insets />
                </StackPane.margin>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="WTF" textAlignment="CENTER">
+            <Text id="wtfLabel" fx:id="wtfLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="WTF" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -278,10 +318,13 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </StackPane>
       <StackPane layoutX="927.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="180.0" opacity="0.64" pickOnBounds="true">
+            <ImageView id="animeMenu" fx:id="animeMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
                   <Image url="@../../res/anime.png" />
                </image>
@@ -289,7 +332,7 @@
                   <Insets />
                </StackPane.margin>
             </ImageView>
-            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="ANIME" textAlignment="CENTER">
+            <Text id="animeLabel" fx:id="animeLabel" fill="#fcfafa" onMouseClicked="#handleSectionSelection" strokeType="OUTSIDE" strokeWidth="0.0" text="ANIME" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -298,6 +341,9 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </StackPane>
     </children>
     <effect>
