@@ -98,7 +98,9 @@ public class HomeController implements Initializable{
         else if(source.equals(animeLabel) || source.equals(animeMenu)) url = Urls.get("anime");
 
         try {
-            BorderPane postsView = FXMLLoader.load(getClass().getResource("/derpina/PostScreen.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/derpina/PostScreen.fxml"));
+            BorderPane postsView = loader.load();
+            PostsController controller = loader.getController();
             stage.setScene(new Scene(postsView));
         } catch (IOException e1) {
             e1.printStackTrace();
