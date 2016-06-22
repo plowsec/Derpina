@@ -38,16 +38,7 @@ public class PostsController implements Initializable{
 
     @FXML
     private void handleScrolling(ScrollEvent e){
-        scrolled += e.getDeltaY();
-        if(scrolled < -postsList.getHeight()){
-            scrolled = -postsList.getHeight();
-        }
-        System.out.println("Delta : " + scrolled);
-        System.out.println("List height : " + postsList.getHeight());
-        if(scrolled == -postsList.getHeight()) {
-            List<ImageView> imgs = getNewPosts();
-            postsList.getChildren().addAll(imgs);
-        }
+
     }
 
     private static List<ImageView> getNewPosts(){
