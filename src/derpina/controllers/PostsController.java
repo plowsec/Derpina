@@ -26,6 +26,9 @@ public class PostsController{
 
     public PostsController(){
 //        ImageFinder.setBaseUrl(Urls.get(category));
+        /*scrollPane.setHbarPolicy(ScrollBarPolicy.NEVER);
+        scrollPane.setVbarPolicy(ScrollBarPolicy.NEVER);*/
+        scrollPane.lookup(".scroll-bar").setVisible(false);
     }
 
     @FXML
