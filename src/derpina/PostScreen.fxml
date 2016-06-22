@@ -46,12 +46,12 @@
       </ButtonBar>
    </top>
    <center>
-      <ScrollPane id="scrollPane" fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+      <ScrollPane id="scrollPane" fx:id="scrollPane" hbarPolicy="NEVER" onScroll="#handleScrolling" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="70.0" />
          </BorderPane.margin>
          <content>
-            <VBox prefHeight="836.0" prefWidth="1300.0" style="-fx-background-color: black;">
+            <VBox id="postsList" fx:id="postsList" prefHeight="836.0" prefWidth="1300.0" style="-fx-background-color: black;">
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>

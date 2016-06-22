@@ -10,10 +10,14 @@ import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class PostsController{
+public class PostsController implements Initializable{
+
+    private double scrolled;
 
     @FXML
     private Text title;
@@ -28,13 +32,22 @@ public class PostsController{
 //        ImageFinder.setBaseUrl(Urls.get(category));
         /*scrollPane.setHbarPolicy(ScrollBarPolicy.NEVER);
         scrollPane.setVbarPolicy(ScrollBarPolicy.NEVER);*/
-        //scrollPane.lookup(".scroll-bar").setVisible(false);
+//        scrollPane.lookup(".scroll-bar").setVisible(false);
+//        ImageFinder.setBaseUrl(Urls.get("wtf"));
     }
 
     @FXML
     private void handleScrolling(ScrollEvent e){
-        System.out.println(postsList.getHeight());
-        System.out.println(e.getDeltaY());
+        scrolled += e.getDeltaY();
+        if(scrolled < -postsList.getHeight()){
+            scrolled = -postsList.getHeight();
+        }
+        System.out.println("Delta : " + scrolled);
+        System.out.println("List height : " + postsList.getHeight());
+        if(scrolled == -postsList.getHeight()) {
+            List<ImageView> imgs = getNewPosts();
+            postsList.getChildren().addAll(imgs);
+        }
     }
 
     private static List<ImageView> getNewPosts(){
@@ -46,5 +59,11 @@ public class PostsController{
         }
 
         return res;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ImageFinder.setBaseUrl(Urls.get("wtf"));
+        scrolled = 0.0;
     }
 }
