@@ -3,11 +3,14 @@ package derpina.controllers;
 
 import derpina.Urls;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -74,7 +77,7 @@ public class HomeController implements Initializable{
     private Text animeLabel;
 
     @FXML
-    public void handleSectionSelection(MouseEvent e){
+    public void handleSectionSelection(MouseEvent e) {
         String url = null;
         Object source = e.getSource();
         if(source.equals(hotLabel) || source.equals(hotMenu)) url = Urls.get("hot");
@@ -90,7 +93,11 @@ public class HomeController implements Initializable{
         else if(source.equals(wtfMenu) || source.equals(wtfLabel)) url = Urls.get("wtf");
         else if(source.equals(animeLabel) || source.equals(animeMenu)) url = Urls.get("anime");
 
-        System.out.println(url);
+        try {
+            BorderPane postsView = (BorderPane) FXMLLoader.load(getClass().getResource("/derpina/PostScreen.fxml"));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
     }
 
     @Override

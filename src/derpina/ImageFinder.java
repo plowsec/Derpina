@@ -25,6 +25,11 @@ public class ImageFinder {
      */
     public static void setBaseUrl(String url){
         baseUrl = url;
+        next = null;
+    }
+
+    public static String getBaseUrl(){
+        return baseUrl;
     }
 
     /**
