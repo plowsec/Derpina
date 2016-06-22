@@ -7,10 +7,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derpina.controllers.PostsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1417.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derpina.controllers.PostsController">
    <top>
       <ButtonBar buttonMinWidth="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" BorderPane.alignment="TOP_RIGHT">
         <buttons>
@@ -53,7 +52,7 @@
          <content>
             <VBox id="postsList" fx:id="postsList" prefHeight="836.0" prefWidth="1300.0" style="-fx-background-color: black;">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <!--<HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <ImageView fitHeight="292.0" fitWidth="389.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -80,7 +79,7 @@
                      <VBox.margin>
                         <Insets left="50.0" right="50.0" />
                      </VBox.margin>
-                  </HBox>
+                  </HBox>-->
                </children></VBox>
          </content>
       </ScrollPane>
