@@ -87,23 +87,25 @@ public class PostsController implements Initializable{
             img.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
-                    System.out.println(mouseEvent.getSceneX() + " : " + mouseEvent.getSceneY());
-                    int truc = (int) (mouseEvent.getSceneX()/TILE_WIDTH) + (int) (mouseEvent.getSceneY()/(TILE_HEIGHT+TILE_VSPACE)) *TILE_PER_ROW;
+
+                    //returns the correct index for ids.get(trcuc), but I don't remember how to create the scene dynamically.
+                    int truc = (int) (mouseEvent.getSceneX()/TILE_WIDTH) + (int) (mouseEvent.getSceneY()/(TILE_HEIGHT+TILE_VSPACE)) * TILE_PER_ROW;
                     System.out.print(truc + " hello bitch " );
-                    //System.out.println(ids.get(truc));
                     Stage dialog = new Stage();
                     dialog.initStyle(StageStyle.UTILITY);
-                    Scene scene = new Scene(new Group(new Text(25, 25, "Hello World!")));
+                    Scene scene = new Scene(new Group(new Text(("coucou"))));
+
                     dialog.setScene(scene);
                     dialog.show();
                 }
             });
-            img.setFitWidth(389);
-            img.setFitHeight(292);
+            img.setFitWidth(TILE_WIDTH);
+            img.setFitHeight(TILE_HEIGHT);
+
+            //I forgot whether this is still useful or not
             if(img.getImage().getHeight()> 500) {
                 img.setViewport(croppedPortion);
             }
-
 
             hboxes[i%3].setMargin(img, new Insets(0,50,0,0));
             hboxes[i%3].getChildren().add(img);
