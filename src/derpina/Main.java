@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Urls.load();
-        Parent root = FXMLLoader.load(getClass().getResource("/derpina/HomeScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/derpina/PostScreen.fxml"));
         primaryStage.setTitle("Derpina");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

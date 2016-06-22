@@ -7,9 +7,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derpina.controllers.PostsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derpina.controllers.PostsController">
    <top>
       <ButtonBar buttonMinWidth="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" BorderPane.alignment="TOP_RIGHT">
         <buttons>
@@ -36,12 +37,45 @@
       </ButtonBar>
    </top>
    <center>
-      <ScrollPane hbarPolicy="NEVER" prefHeight="351.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+      <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="20.0" />
          </BorderPane.margin>
          <content>
-            <VBox prefHeight="339.0" prefWidth="600.0" style="-fx-background-color: black;" />
+            <VBox prefHeight="836.0" prefWidth="1300.0" style="-fx-background-color: black;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="292.0" fitWidth="389.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/aB1Kqz2_460s.jpg" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="292.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../res/aB1Kqz2_460s.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="291.0" fitWidth="317.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/girl.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="50.0" />
+               </padding></VBox>
          </content>
       </ScrollPane>
    </center>
