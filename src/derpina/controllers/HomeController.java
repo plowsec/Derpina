@@ -5,16 +5,20 @@ import derpina.Urls;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HomeController implements Initializable{
+
+    private Stage stage;
 
     @FXML
     private ImageView hotMenu;
@@ -94,10 +98,15 @@ public class HomeController implements Initializable{
         else if(source.equals(animeLabel) || source.equals(animeMenu)) url = Urls.get("anime");
 
         try {
-            BorderPane postsView = (BorderPane) FXMLLoader.load(getClass().getResource("/derpina/PostScreen.fxml"));
+            BorderPane postsView = FXMLLoader.load(getClass().getResource("/derpina/PostScreen.fxml"));
+            stage.setScene(new Scene(postsView));
         } catch (IOException e1) {
             e1.printStackTrace();
         }
+    }
+
+    public void setStage(Stage newStage){
+        stage = newStage;
     }
 
     @Override

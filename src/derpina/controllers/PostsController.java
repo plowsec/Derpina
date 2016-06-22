@@ -44,9 +44,4 @@ public class PostsController{
 
         return res;
     }
-
-    public void main(String[] args){
-        ImageFinder.setBaseUrl(Urls.get("wtf"));
-        List<ImageView> res = getNewPosts();
-    }
 }
