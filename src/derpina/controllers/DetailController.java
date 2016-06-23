@@ -12,12 +12,12 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
+import static derpina.Config.*;
 public class DetailController {
 
     public DetailController(String id){
         Pane root = new Pane();
-        ImageView post = new ImageView("IaopZA7e_700b.jpg");
+        ImageView post = new ImageView(IMG_BASE_URL + id+  IMG_SMALL_ID + ".jpg");
         post.setFitWidth(600);
         VBox rightBox = new VBox();
         VBox commentsBox = new VBox();
@@ -40,6 +40,13 @@ public class DetailController {
 
         author.getChildren().addAll(at, pt);
         comment.getChildren().add(cm);
+
+        commentsBox.getChildren().add(author);
+        commentsBox.getChildren().add(comment);
+
+        rightBox.getChildren().add(commentsBox);
+
+        root.getChildren().addAll(post, rightBox);
 
         Stage dialog = new Stage();
         dialog.setMinWidth(1100);

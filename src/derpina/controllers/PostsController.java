@@ -30,18 +30,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import static derpina.Config.*;
+
 public class PostsController{
 
     private boolean isloading;
     private String url;
 
-    private static final String IMG_BASE_URL = "http://img-9gag-fun.9cache.com/photo/";
-    private static final String IMG_BIG_ID = "_700b";
-    private static final String IMG_SMALL_ID = "_460s";
-    private static final int TILE_WIDTH = 389;
-    private static final int TILE_HEIGHT = 389;
-    private static final int TILE_VSPACE = 100;
-    private static final int TILE_PER_ROW = 3;
+
 
 
     @FXML
