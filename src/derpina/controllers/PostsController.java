@@ -12,6 +12,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SplitPane;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
@@ -55,6 +56,9 @@ public class PostsController {
     private ScrollPane scrollPane;
 
     @FXML
+    private ImageView loading;
+
+    @FXML
     private void handleScrolling(ScrollEvent e) {
 
         if (scrollPane.getVvalue() == 1.0 && !isloading) {
@@ -67,6 +71,7 @@ public class PostsController {
     }
 
     private List<HBox> getNewPosts() {
+        //loading.setVisible(true);
         List<HBox> res = new ArrayList<>();
         List<String> ids = ImageFinder.getNext();
         Rectangle2D croppedPortion = new Rectangle2D(0, 0, TILE_WIDTH, TILE_HEIGHT);
@@ -101,11 +106,12 @@ public class PostsController {
             hboxes[i % 3].setMargin(img, new Insets(0, 50, 0, 0));
             hboxes[i % 3].getChildren().add(img);
         }
-
+        //loading.setVisible(false);
         return res;
     }
 
     public void init(String url) {
+        //loading.setVisible(false);
         ImageFinder.setBaseUrl(url);
         List<HBox> imgs = getNewPosts();
         postsList.getChildren().addAll(imgs);

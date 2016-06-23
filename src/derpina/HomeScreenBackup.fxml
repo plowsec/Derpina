@@ -14,17 +14,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane id="root" fx:id="root" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="1152.0" style="-fx-background-color: black;" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derpina.controllers.HomeController">
+<GridPane id="root" fx:id="root" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="868.0" prefWidth="1212.0" style="-fx-background-color: black;" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derpina.controllers.HomeController">
     <columnConstraints>
-      <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="40.0" />
         <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
         <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="100.0" />
         <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="220.0" />
         <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" prefWidth="180.0" />
-        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="250.0" />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
@@ -34,7 +33,7 @@
         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
     </padding>
     <children>
-        <Label prefHeight="163.0" prefWidth="400.0" text="All sections" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+        <Label prefHeight="163.0" prefWidth="755.0" text="All sections" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
             <font>
                 <Font size="36.0" />
             </font>
@@ -42,7 +41,7 @@
                 <Insets left="10.0" />
             </padding>
         </Label>
-        <Label alignment="CENTER" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Top sections" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <Label alignment="CENTER" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Top sections" textFill="WHITE" GridPane.rowIndex="1">
             <font>
                 <Font size="36.0" />
             </font>
@@ -50,9 +49,9 @@
                 <Insets left="10.0" />
             </padding>
         </Label>
-        <ImageView fitHeight="120.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true" smooth="false" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <ImageView fitHeight="120.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true" smooth="false" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
             <image>
-                <Image url="@res/9gag_logo.png" />
+                <Image url="@../../res/9gag_logo.png" />
             </image>
             <viewport>
                 <Rectangle2D />
@@ -61,11 +60,11 @@
                 <Insets left="50.0" />
             </GridPane.margin>
         </ImageView>
-      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.rowIndex="2">
          <children>
             <ImageView id="hotMenu" fx:id="hotMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.36" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@res/jesus.png" />
+                  <Image url="@../../res/jesus.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -84,11 +83,11 @@
             <Insets left="50.0" />
          </GridPane.margin>
       </StackPane>
-      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.rowIndex="3">
          <children>
             <ImageView id="trendingMenu" fx:id="trendingMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.68" pickOnBounds="true">
                <image>
-                  <Image url="@res/overly-manly-man.png" />
+                  <Image url="@../../res/overly-manly-man.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -110,11 +109,11 @@
             <Insets left="50.0" />
          </GridPane.margin>
       </StackPane>
-      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.rowIndex="4">
          <children>
             <ImageView id="freshMenu" fx:id="freshMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/one-does-not-simply.png" />
+                  <Image url="@../../res/one-does-not-simply.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -133,11 +132,11 @@
             <Insets left="50.0" />
          </GridPane.margin>
       </StackPane>
-      <StackPane layoutX="110.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+      <StackPane layoutX="110.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <children>
             <ImageView id="gifMenu" fx:id="gifMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/awkward.png" />
+                  <Image url="@../../res/awkward.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -156,11 +155,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </StackPane>
-      <StackPane layoutX="458.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+      <StackPane layoutX="458.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
          <children>
             <ImageView id="cosplayMenu" fx:id="cosplayMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/deadpool.png" />
+                  <Image url="@../../res/deadpool.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -182,11 +181,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </StackPane>
-      <StackPane layoutX="458.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+      <StackPane layoutX="458.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
          <children>
             <ImageView id="nsfwMenu" fx:id="nsfwMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/strahovski.png" />
+                  <Image url="@../../res/strahovski.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -208,11 +207,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </StackPane>
-      <StackPane layoutX="458.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+      <StackPane layoutX="458.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
          <children>
             <ImageView id="videoMenu" fx:id="videoMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/high-guy.png" />
+                  <Image url="@../../res/high-guy.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -231,11 +230,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </StackPane>
-      <StackPane layoutX="672.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+      <StackPane layoutX="672.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
          <children>
             <ImageView id="comicMenu" fx:id="comicMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/forever-alone.png" />
+                  <Image url="@../../res/forever-alone.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -254,11 +253,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </StackPane>
-      <StackPane layoutX="672.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+      <StackPane layoutX="672.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
          <children>
             <ImageView fx:id="geekyMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/itguy.png" />
+                  <Image url="@../../res/itguy.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -277,11 +276,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </StackPane>
-      <StackPane layoutX="672.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+      <StackPane layoutX="672.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
          <children>
             <ImageView id="girlMenu" fx:id="girlMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/girl.png" />
+                  <Image url="@../../res/girl.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -300,11 +299,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </StackPane>
-      <StackPane layoutX="927.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+      <StackPane layoutX="927.0" layoutY="358.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
          <children>
             <ImageView id="wtfMenu" fx:id="wtfMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/chubby_bubbles_girl.png" />
+                  <Image url="@../../res/chubby_bubbles_girl.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -323,11 +322,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </StackPane>
-      <StackPane layoutX="927.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+      <StackPane layoutX="927.0" layoutY="518.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="120.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
          <children>
             <ImageView id="animeMenu" fx:id="animeMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/anime.png" />
+                  <Image url="@../../res/anime.png" />
                </image>
                <StackPane.margin>
                   <Insets />
