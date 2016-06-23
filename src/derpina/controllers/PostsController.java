@@ -17,7 +17,10 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -93,18 +96,33 @@ public class PostsController implements Initializable{
                     int truc = (int) (mouseEvent.getSceneX()/TILE_WIDTH) + (int) (mouseEvent.getSceneY()/(TILE_HEIGHT+TILE_VSPACE)) * TILE_PER_ROW;
                     System.out.print(truc + " hello bitch " );
 
-                    SplitPane root = new SplitPane();
+                    Pane root = new Pane();
+                    ImageView post = new ImageView("IaopZA7e_700b.jpg");
+                    post.setFitWidth(600);
+                    VBox rightBox = new VBox();
+                    VBox commentsBox = new VBox();
+                    rightBox.setPrefWidth(500);
+                    Text title = new Text("Top commments");
+                    title.setFont(Font.font("system", FontWeight.BOLD, 30));
+                    rightBox.setMargin(title, new Insets(20,0,0,30));
 
+                    commentsBox.setPadding(new Insets(20, 0, 0, 30));
 
+                    HBox author = new HBox();
+                    HBox comment = new HBox();
+
+                    Text at = new Text("bedondy");
+                    at.setFont(Font.font("system", FontWeight.BOLD, 13));
                     Stage dialog = new Stage();
+                    dialog.setMinWidth(1100);
+                    dialog.setMinHeight(742);
                     dialog.initStyle(StageStyle.UTILITY);
                     Scene scene = new Scene(root);
-
                     dialog.setScene(scene);
                     dialog.show();
                 }
             });
-            
+
             img.setFitWidth(TILE_WIDTH);
             img.setFitHeight(TILE_HEIGHT);
 
