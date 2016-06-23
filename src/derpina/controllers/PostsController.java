@@ -109,10 +109,18 @@ public class PostsController implements Initializable{
                     commentsBox.setPadding(new Insets(20, 0, 0, 30));
 
                     HBox author = new HBox();
+                    author.setSpacing(20);
                     HBox comment = new HBox();
 
                     Text at = new Text("bedondy");
                     at.setFont(Font.font("system", FontWeight.BOLD, 13));
+
+                    Text pt = new Text("1337 pts");
+                    Text cm = new Text("Heard it all in Steve Irwin's voice.");
+
+                    author.getChildren().addAll(at, pt);
+                    comment.getChildren().add(cm);
+                    
                     Stage dialog = new Stage();
                     dialog.setMinWidth(1100);
                     dialog.setMinHeight(742);
