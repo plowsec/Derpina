@@ -3,6 +3,8 @@ package derpina.controllers;
 
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -17,8 +19,13 @@ public class DetailController {
 
     public DetailController(String id){
         Pane root = new Pane();
-        ImageView post = new ImageView(IMG_BASE_URL + id+  IMG_SMALL_ID + ".jpg");
-        post.setFitWidth(600);
+        ScrollPane left = new ScrollPane();
+        ScrollPane right = new ScrollPane();
+
+        ImageView post = new ImageView(IMG_BASE_URL + id+  IMG_BIG_ID + ".jpg");
+        //post.setFitWidth(600);
+
+        HBox main = new HBox();
         VBox rightBox = new VBox();
         VBox commentsBox = new VBox();
         rightBox.setPrefWidth(500);
@@ -44,9 +51,12 @@ public class DetailController {
         commentsBox.getChildren().add(author);
         commentsBox.getChildren().add(comment);
 
-        rightBox.getChildren().add(commentsBox);
+        left.setContent(post);
+        right.setContent(rightBox);
 
-        root.getChildren().addAll(post, rightBox);
+        rightBox.getChildren().add(commentsBox);
+        main.getChildren().addAll(left, right);
+        root.getChildren().add(main);
 
         Stage dialog = new Stage();
         dialog.setMinWidth(1100);
