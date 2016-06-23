@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static java.lang.System.exit;
+
 /**
  * A static class which allows to get a list containing 9gag post ids
  */
@@ -72,10 +74,11 @@ public class ImageFinder {
             return ids;
 
         } catch (MalformedURLException e) {
-            System.out.println(baseUrl);
-            e.printStackTrace();
+            Display.error("L'URL utilisée n'est pas valide, l'application va quitter");
+            exit(10);
         } catch (IOException e) {
-            e.printStackTrace();
+            Display.error("Un problème lié à la connexion est survenu, l'application va quitter");
+            exit(11);
         }
         return null;
     }

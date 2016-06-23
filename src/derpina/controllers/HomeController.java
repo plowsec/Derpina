@@ -1,6 +1,7 @@
 package derpina.controllers;
 
 
+import derpina.Display;
 import derpina.Urls;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static java.lang.System.exit;
 
 public class HomeController implements Initializable{
 
@@ -101,8 +104,11 @@ public class HomeController implements Initializable{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/derpina/PostScreen.fxml"));
             BorderPane postsView = loader.load();
             PostsController controller = loader.getController();
+            controller.init(url);
             stage.setScene(new Scene(postsView));
         } catch (IOException e1) {
+            Display.error("Une erreur s'est produite, l'application va quitter...");
+            exit(10);
             e1.printStackTrace();
         }
     }
