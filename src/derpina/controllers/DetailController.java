@@ -19,6 +19,7 @@ public class DetailController {
 
     public DetailController(String id){
         Pane root = new Pane();
+        root.setPrefHeight(742);
         ScrollPane left = new ScrollPane();
         ScrollPane right = new ScrollPane();
 
@@ -26,6 +27,8 @@ public class DetailController {
         //post.setFitWidth(600);
 
         HBox main = new HBox();
+        main.setPrefHeight(742);
+
         VBox rightBox = new VBox();
         VBox commentsBox = new VBox();
         rightBox.setPrefWidth(500);
@@ -59,10 +62,13 @@ public class DetailController {
         root.getChildren().add(main);
 
         Stage dialog = new Stage();
+        dialog.setResizable(false);
         dialog.setMinWidth(1100);
         dialog.setMinHeight(742);
         dialog.initStyle(StageStyle.UTILITY);
         Scene scene = new Scene(root);
+        dialog.setWidth(1100);
+        dialog.setHeight(742);
         dialog.setScene(scene);
         dialog.show();
     }

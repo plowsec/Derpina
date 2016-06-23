@@ -35,10 +35,6 @@ import static derpina.Config.*;
 public class PostsController{
 
     private boolean isloading;
-    private String url;
-
-
-
 
     @FXML
     private Text title;
@@ -48,14 +44,6 @@ public class PostsController{
 
     @FXML
     private ScrollPane scrollPane;
-
-    public PostsController(){
-//        ImageFinder.setBaseUrl(Urls.get(category));
-        /*scrollPane.setHbarPolicy(ScrollBarPolicy.NEVER);
-        scrollPane.setVbarPolicy(ScrollBarPolicy.NEVER);*/
-//        scrollPane.lookup(".scroll-bar").setVisible(false);
-//        ImageFinder.setBaseUrl(Urls.get("wtf"));
-    }
 
     @FXML
     private void handleScrolling(ScrollEvent e){
@@ -84,17 +72,12 @@ public class PostsController{
             hboxes[i%3].setPrefWidth(250);
             hboxes[i%3].setPrefHeight(150);
 
+            final String id = ids.get(i);
+
             System.out.println(ids.get(i));
             ImageView img = new ImageView(IMG_BASE_URL + ids.get(i) +  IMG_SMALL_ID + ".jpg");
-            img.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent mouseEvent) {
-
-                    //returns the correct index for ids.get(trcuc), but I don't remember how to create the scene dynamically.
-                    int index = (int) (mouseEvent.getSceneX()/TILE_WIDTH) + (int) (mouseEvent.getSceneY()/(TILE_HEIGHT+TILE_VSPACE)) * TILE_PER_ROW;
-
-                    new DetailController(ids.get(index));
-                }
+            img.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+                new DetailController(id);
             });
 
             img.setFitWidth(TILE_WIDTH);

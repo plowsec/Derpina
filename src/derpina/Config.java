@@ -1,7 +1,7 @@
 package derpina;
 
 /**
- * Created by vladimir on 23.06.16.
+ * A class used to provide static constants
  */
 public final class Config {
 
