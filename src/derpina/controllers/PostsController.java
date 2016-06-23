@@ -1,5 +1,6 @@
 package derpina.controllers;
 
+import derpina.Display;
 import derpina.ImageFinder;
 import derpina.Urls;
 import javafx.event.EventHandler;
@@ -25,14 +26,22 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static derpina.Config.*;
+import static java.lang.System.exit;
 
-public class PostsController{
+public class PostsController {
 
     private boolean isloading;
 
@@ -46,9 +55,9 @@ public class PostsController{
     private ScrollPane scrollPane;
 
     @FXML
-    private void handleScrolling(ScrollEvent e){
+    private void handleScrolling(ScrollEvent e) {
 
-        if(scrollPane.getVvalue() == 1.0 && !isloading) {
+        if (scrollPane.getVvalue() == 1.0 && !isloading) {
             isloading = true;
             List<HBox> imgs = getNewPosts();
             postsList.getChildren().addAll(imgs);
@@ -57,26 +66,27 @@ public class PostsController{
         }
     }
 
-    private List<HBox> getNewPosts(){
+    private List<HBox> getNewPosts() {
         List<HBox> res = new ArrayList<>();
         List<String> ids = ImageFinder.getNext();
         Rectangle2D croppedPortion = new Rectangle2D(0, 0, TILE_WIDTH, TILE_HEIGHT);
         HBox[] hboxes = new HBox[3];
-        for(int i = 0; i < hboxes.length ; i++) {
+        for (int i = 0; i < hboxes.length; i++) {
             hboxes[i] = new HBox();
             res.add(hboxes[i]);
         }
-        for(int i = 0 ; i < ids.size() ; i++){
+        for (int i = 0; i < ids.size(); i++) {
 
-            hboxes[i%3].setPadding(new Insets(0,50,50,50));
-            hboxes[i%3].setPrefWidth(250);
-            hboxes[i%3].setPrefHeight(150);
+            hboxes[i % 3].setPadding(new Insets(0, 50, 50, 50));
+            hboxes[i % 3].setPrefWidth(250);
+            hboxes[i % 3].setPrefHeight(150);
 
             final String id = ids.get(i);
 
             System.out.println(ids.get(i));
-            ImageView img = new ImageView(IMG_BASE_URL + ids.get(i) +  IMG_SMALL_ID + ".jpg");
+            ImageView img = new ImageView(IMG_BASE_URL + ids.get(i) + IMG_SMALL_ID + ".jpg");
             img.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+
                 new DetailController(id);
             });
 
@@ -84,12 +94,12 @@ public class PostsController{
             img.setFitHeight(TILE_HEIGHT);
 
             //I forgot whether this is still useful or not
-            if(img.getImage().getHeight()> 500) {
+            /*if (img.getImage().getHeight() > 500) {
                 img.setViewport(croppedPortion);
-            }
+            }*/
 
-            hboxes[i%3].setMargin(img, new Insets(0,50,0,0));
-            hboxes[i%3].getChildren().add(img);
+            hboxes[i % 3].setMargin(img, new Insets(0, 50, 0, 0));
+            hboxes[i % 3].getChildren().add(img);
         }
 
         return res;
