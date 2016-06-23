@@ -2,6 +2,7 @@ package derpina.controllers;
 
 
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
@@ -51,6 +52,7 @@ public class DetailController {
         author.getChildren().addAll(at, pt);
         comment.getChildren().add(cm);
 
+        author.setAlignment(Pos.CENTER);
         commentsBox.getChildren().add(author);
         commentsBox.getChildren().add(comment);
 
