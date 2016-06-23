@@ -7,17 +7,24 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1417.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derpina.controllers.PostsController">
    <top>
       <ButtonBar buttonMinWidth="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" BorderPane.alignment="TOP_RIGHT">
         <buttons>
-            <ImageView id="loading" fx:id="loading" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../res/loading.gif" />
-               </image>
-            </ImageView>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView id="loading" fx:id="loading" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../res/loading.gif" />
+                     </image>
+                  </ImageView>
+                  <Rectangle id="veil" fx:id="veil" arcHeight="5.0" arcWidth="5.0" fill="#040006" height="40.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+               </children>
+            </StackPane>
             <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="10.0">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">

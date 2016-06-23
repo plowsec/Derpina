@@ -1,46 +1,21 @@
 package derpina.controllers;
 
-import derpina.Display;
 import derpina.ImageFinder;
-import derpina.Urls;
-import javafx.event.EventHandler;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Group;
-import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.SplitPane;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.PixelReader;
-import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import static derpina.Config.*;
-import static java.lang.System.exit;
 
 public class PostsController {
 
@@ -59,20 +34,44 @@ public class PostsController {
     private ImageView loading;
 
     @FXML
+    private Rectangle veil;
+
+    @FXML
     private void handleScrolling(ScrollEvent e) {
 
         if (scrollPane.getVvalue() == 1.0 && !isloading) {
+
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    veil.setVisible(false);
+                }
+            });
+
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
+
             isloading = true;
-            List<HBox> imgs = getNewPosts();
-            postsList.getChildren().addAll(imgs);
-            scrollPane.setVvalue(0.8);
-            isloading = false;
+
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    List<HBox> imgs = getNewPosts();
+                    postsList.getChildren().addAll(imgs);
+                    scrollPane.setVvalue(0.8);
+                    isloading = false;
+                    veil.setVisible(true);
+                }
+            });
         }
     }
 
     private List<HBox> getNewPosts() {
-        //loading.setVisible(true);
         List<HBox> res = new ArrayList<>();
+
         List<String> ids = ImageFinder.getNext();
         Rectangle2D croppedPortion = new Rectangle2D(0, 0, TILE_WIDTH, TILE_HEIGHT);
         HBox[] hboxes = new HBox[3];
@@ -111,9 +110,13 @@ public class PostsController {
     }
 
     public void init(String url) {
-        //loading.setVisible(false);
-        ImageFinder.setBaseUrl(url);
-        List<HBox> imgs = getNewPosts();
-        postsList.getChildren().addAll(imgs);
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                ImageFinder.setBaseUrl(url);
+                List<HBox> imgs = getNewPosts();
+                postsList.getChildren().addAll(imgs);
+           }
+        });
     }
 }
