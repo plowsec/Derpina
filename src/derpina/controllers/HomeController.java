@@ -6,13 +6,17 @@ import derpina.Urls;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +26,9 @@ import static java.lang.System.exit;
 public class HomeController implements Initializable{
 
     private Stage stage;
+
+    @FXML
+    private GridPane root;
 
     @FXML
     private ImageView hotMenu;
@@ -84,7 +91,16 @@ public class HomeController implements Initializable{
     private Text animeLabel;
 
     @FXML
+    private ImageView loadingSymbol;
+
+    @FXML
     public void handleSectionSelection(MouseEvent e) {
+        //loadingSymbol.setVisible(true);
+        /*ImageView l = new ImageView(new File("res/loading.gif").toURI().toString());
+        l.setFitHeight(40);
+        l.setFitWidth(40);
+        root.add(l, 5, 1);
+        root.setMargin(l, new Insets(0,0,150, 210));*/
         String url = null;
         Object source = e.getSource();
         if(source.equals(hotLabel) || source.equals(hotMenu)) url = Urls.get("hot");

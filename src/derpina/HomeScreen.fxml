@@ -47,12 +47,12 @@
                 <Font size="36.0" />
             </font>
             <padding>
-                <Insets left="10.0" />
+                <Insets left="20.0" />
             </padding>
         </Label>
         <ImageView fitHeight="120.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true" smooth="false" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
             <image>
-                <Image url="@res/9gag_logo.png" />
+                <Image url="@../../res/9gag_logo.png" />
             </image>
             <viewport>
                 <Rectangle2D />
@@ -65,7 +65,7 @@
          <children>
             <ImageView id="hotMenu" fx:id="hotMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.36" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@res/jesus.png" />
+                  <Image url="@../../res/jesus.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -88,7 +88,7 @@
          <children>
             <ImageView id="trendingMenu" fx:id="trendingMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.68" pickOnBounds="true">
                <image>
-                  <Image url="@res/overly-manly-man.png" />
+                  <Image url="@../../res/overly-manly-man.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -114,7 +114,7 @@
          <children>
             <ImageView id="freshMenu" fx:id="freshMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/one-does-not-simply.png" />
+                  <Image url="@../../res/one-does-not-simply.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -137,7 +137,7 @@
          <children>
             <ImageView id="gifMenu" fx:id="gifMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/awkward.png" />
+                  <Image url="@../../res/awkward.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -160,7 +160,7 @@
          <children>
             <ImageView id="cosplayMenu" fx:id="cosplayMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/deadpool.png" />
+                  <Image url="@../../res/deadpool.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -186,7 +186,7 @@
          <children>
             <ImageView id="nsfwMenu" fx:id="nsfwMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/strahovski.png" />
+                  <Image url="@../../res/strahovski.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -212,7 +212,7 @@
          <children>
             <ImageView id="videoMenu" fx:id="videoMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/high-guy.png" />
+                  <Image url="@../../res/high-guy.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -235,7 +235,7 @@
          <children>
             <ImageView id="comicMenu" fx:id="comicMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/forever-alone.png" />
+                  <Image url="@../../res/forever-alone.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -258,7 +258,7 @@
          <children>
             <ImageView fx:id="geekyMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/itguy.png" />
+                  <Image url="@../../res/itguy.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -281,7 +281,7 @@
          <children>
             <ImageView id="girlMenu" fx:id="girlMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/girl.png" />
+                  <Image url="@../../res/girl.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -304,7 +304,7 @@
          <children>
             <ImageView id="wtfMenu" fx:id="wtfMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/chubby_bubbles_girl.png" />
+                  <Image url="@../../res/chubby_bubbles_girl.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -327,7 +327,7 @@
          <children>
             <ImageView id="animeMenu" fx:id="animeMenu" fitHeight="150.0" fitWidth="180.0" onMouseClicked="#handleSectionSelection" opacity="0.64" pickOnBounds="true">
                <image>
-                  <Image url="@res/anime.png" />
+                  <Image url="@../../res/anime.png" />
                </image>
                <StackPane.margin>
                   <Insets />
@@ -346,6 +346,14 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </StackPane>
+      <ImageView id="loadingSymbol" fx:id="loadingSymbol" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
+         <image>
+            <Image url="@../../res/loading.gif" />
+         </image>
+         <GridPane.margin>
+            <Insets bottom="150.0" left="210.0" />
+         </GridPane.margin>
+      </ImageView>
     </children>
     <effect>
         <ColorAdjust />
