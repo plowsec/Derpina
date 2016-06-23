@@ -10,6 +10,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.SplitPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
@@ -91,14 +92,19 @@ public class PostsController implements Initializable{
                     //returns the correct index for ids.get(trcuc), but I don't remember how to create the scene dynamically.
                     int truc = (int) (mouseEvent.getSceneX()/TILE_WIDTH) + (int) (mouseEvent.getSceneY()/(TILE_HEIGHT+TILE_VSPACE)) * TILE_PER_ROW;
                     System.out.print(truc + " hello bitch " );
+
+                    SplitPane root = new SplitPane();
+
+
                     Stage dialog = new Stage();
                     dialog.initStyle(StageStyle.UTILITY);
-                    Scene scene = new Scene(new Group(new Text(("coucou"))));
+                    Scene scene = new Scene(root);
 
                     dialog.setScene(scene);
                     dialog.show();
                 }
             });
+            
             img.setFitWidth(TILE_WIDTH);
             img.setFitHeight(TILE_HEIGHT);
 
